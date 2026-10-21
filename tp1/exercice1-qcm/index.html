@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCM</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <header class="qcm-header">
+            <h1>QCM</h1>
+            <p class="description">Répondre aux questions</p>
+        </header>
+
+        <form id="qcmForm">
+            <div id="questions"></div>
+
+            <div class="buttons">
+                <button type="button" id="resetBtn" class="btn btn-secondary">
+                    Réinitialiser
+                </button>
+                <button type="button" id="resultBtn" class="btn btn-primary">
+                    Voir mon résultat
+                </button>
+                <button type="button" id="correctionBtn" class="btn btn-success">
+                    Voir la correction
+                </button>
+            </div>
+        </form>
+
+        <!-- Zone pour afficher le résultat directement dans la page -->
+        <div id="resultModal" class="result-card hidden">
+            <h2>Résultat de votre test</h2>
+            <div class="score-badge">
+                <span id="scoreText">0 / 5</span>
+                <small id="percentageText">(0%)</small>
+            </div>
+            <ul id="scoreDetails" class="details-list"></ul>
+        </div>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
